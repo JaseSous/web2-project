@@ -9,14 +9,14 @@
 <body>
     <header>
         <div class="container nav-wrapper">
-            <a href="index.php" class="logo">VOGUE SHOP</a>
+            <a href="index.php" class="logo">VOGUE</a>
             <nav class="nav-links">
                 <a href="index.php">Trang chủ</a>
                 <a href="index.php?area=client&controller=sanpham&action=danhsach">Sản phẩm</a>
-                <a href="index.php?area=client&controller=giohang&action=index" class="cart-btn">🛒 Giỏ hàng (0)</a>
+                <a href="index.php?area=client&controller=giohang&action=index" class="cart-btn">Giỏ hàng</a>
                 <a href="index.php?area=client&controller=nguoidung&action=dangnhap">Đăng nhập</a>
             </nav>
         </div>
     </header>
     
-    <main class="container">
+    <main>

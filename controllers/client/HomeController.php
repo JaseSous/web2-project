@@ -10,13 +10,11 @@ class HomeController {
     }
 
     public function index() {
-        // 1. Khởi tạo Model
         $sanPhamModel = new SanPhamModel($this->conn);
 
-        // 2. Lấy danh sách sản phẩm đang bán (hien_trang = 1)
-        $danhSachSanPham = $sanPhamModel->layDanhSachSanPhamDangBan();
+        // Thay đổi: Chỉ gọi 4 sản phẩm mới nhất ra trang chủ
+        $danhSachSanPham = $sanPhamModel->laySanPhamMoiNhat(4);
 
-        // 3. Gọi file View ra để hiển thị (Truyền biến $danhSachSanPham sang cho View dùng)
         require_once './views/client/home/index.php';
     }
 }

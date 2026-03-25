@@ -31,5 +31,13 @@
         <?php else: ?>
             <p style="text-align: center; width: 100%; color: #666; letter-spacing: 1px;">Admin đang cập nhật bộ sưu tập...</p>
         <?php endif; ?>
+    </div> <div style="text-align: center; margin-bottom: 80px;">
+        <a href="index.php?area=client&controller=sanpham&action=danhsach" 
+           style="display: inline-block; padding: 15px 50px; background: transparent; color: var(--text-black); border: 2px solid var(--text-black); text-transform: uppercase; letter-spacing: 3px; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;"
+           onmouseover="this.style.background='var(--text-black)'; this.style.color='var(--bg-white)';"
+           onmouseout="this.style.background='transparent'; this.style.color='var(--text-black)';">
+            Xem tất cả
+        </a>
     </div>
+
 </div> <?php require_once './views/client/layout/footer.php'; ?>

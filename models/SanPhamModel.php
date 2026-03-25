@@ -77,5 +77,12 @@ class SanPhamModel extends BaseModel {
         // Nên ở đây ta nối chuỗi trực tiếp cho phần LIMIT OFFSET vì $limit và $offset ta đã ép kiểu (int) bên Controller rồi, rất an toàn.
         return $this->getAll($sql, $params);
     }
+
+    // Hàm lấy sản phẩm mới nhất có giới hạn số lượng (cho Trang chủ)
+    public function laySanPhamMoiNhat($limit = 4) {
+        $sql = "SELECT * FROM SanPham WHERE hien_trang = 1 ORDER BY id DESC LIMIT $limit";
+        // Do $limit truyền vào từ code cứng (số 4) nên việc nối chuỗi ở đây hoàn toàn an toàn
+        return $this->getAll($sql);
+    }
 }
 ?>
